@@ -29,8 +29,8 @@ class MapContainer extends Component {
         zoom={14}
         style={mapStyles}
         initialCenter={{
-          lat: -1.2884,
-          lng: 36.8233,
+          lat: 47.444,
+          lng: -122.176,
         }}
       />
     );
