@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Map, GoogleApiWrapper } from "google-maps-react";
+import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 import MapWithASearchBox from "./searchBox.js";
 
 const mapStyles = {
@@ -14,7 +14,9 @@ class MapContainer extends Component {
         initialCenter={{ lat: 47.444, lng: -122.176 }}
         style={mapStyles}
         zoom={8}
-      />
+      >
+        <Marker position={{ lat: 48.0, lng: -122.0 }} />
+      </Map>
     );
   }
 }
