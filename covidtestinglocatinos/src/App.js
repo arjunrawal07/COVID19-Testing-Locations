@@ -1,7 +1,12 @@
 import React, { Component } from "react";
-import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
-import MapWithASearchBox from "./searchBox.js";
+/* global google */
 
+import {
+  GoogleApiWrapper,
+  Marker,
+  PlacesWithStandaloneSearchBox,
+} from "google-maps-react";
+import MapWithASearchBox from "./Search.js";
 const mapStyles = {
   width: "100%",
   height: "100%",
@@ -9,14 +14,16 @@ const mapStyles = {
 class MapContainer extends Component {
   render() {
     return (
-      <Map
-        google={this.props.google}
-        initialCenter={{ lat: 47.444, lng: -122.176 }}
-        style={mapStyles}
-        zoom={8}
-      >
-        <Marker position={{ lat: 48.0, lng: -122.0 }} />
-      </Map>
+      <div>
+        <MapWithASearchBox
+          google={this.props.google}
+          initialCenter={{ lat: 47.444, lng: -122.176 }}
+          style={mapStyles}
+          zoom={8}
+        >
+          <Marker position={{ lat: 48.0, lng: -122.0 }} />
+        </MapWithASearchBox>
+      </div>
     );
   }
 }

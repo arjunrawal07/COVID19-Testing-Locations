@@ -9,6 +9,7 @@ import {
 import Geocode from "react-geocode";
 Geocode.setApiKey("AIzaSyBixvzbtmFQ-ogW62l7UKyKZXKs3zUUq5M");
 Geocode.enableDebug();
+import PlacesWithStandaloneSearchBox from "./Search";
 
 class Map extends Component {
   constructor(props) {
