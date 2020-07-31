@@ -1,11 +1,8 @@
 import React, { Component } from "react";
+import "./App.css";
 /* global google */
 
-import {
-  GoogleApiWrapper,
-  Marker,
-  PlacesWithStandaloneSearchBox,
-} from "google-maps-react";
+import { GoogleApiWrapper, Marker } from "google-maps-react";
 import MapWithASearchBox from "./Search.js";
 const mapStyles = {
   width: "100%",
@@ -14,15 +11,13 @@ const mapStyles = {
 class MapContainer extends Component {
   render() {
     return (
-      <div>
+      <div className="main">
         <MapWithASearchBox
           google={this.props.google}
           initialCenter={{ lat: 47.444, lng: -122.176 }}
-          style={mapStyles}
+          // style={mapStyles}
           zoom={8}
-        >
-          <Marker position={{ lat: 48.0, lng: -122.0 }} />
-        </MapWithASearchBox>
+        ></MapWithASearchBox>
       </div>
     );
   }

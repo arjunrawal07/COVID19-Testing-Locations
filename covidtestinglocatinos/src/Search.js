@@ -18,7 +18,7 @@ const MapWithASearchBox = compose(
     googleMapURL:
       "https://maps.googleapis.com/maps/api/js?key=AIzaSyBixvzbtmFQ-ogW62l7UKyKZXKs3zUUq5M&libraries=geometry,drawing,places",
     loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: `400px` }} />,
+    containerElement: <div style={{ height: `100vh` }} />,
     mapElement: <div style={{ height: `100%` }} />,
   }),
   lifecycle({
@@ -85,7 +85,7 @@ const MapWithASearchBox = compose(
     <SearchBox
       ref={props.onSearchBoxMounted}
       bounds={props.bounds}
-      controlPosition={google.maps.ControlPosition.TOP_LEFT}
+      controlPosition={google.maps.ControlPosition.TOP_RIGHT}
       onPlacesChanged={props.onPlacesChanged}
     >
       <input
